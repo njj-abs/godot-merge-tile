@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Grid/GridContainer.gd" type="Script" id=1]
+[ext_resource path="res://Grid/Panel.tscn" type="PackedScene" id=2]
+
+[node name="Node" type="Node"]
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="GridContainer" type="GridContainer" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -224.0
+margin_top = -128.5
+margin_right = 224.0
+margin_bottom = 128.5
+columns = 4
+script = ExtResource( 1 )
+
+[node name="Panel" parent="Control/GridContainer" instance=ExtResource( 2 )]
+
+[node name="Panel2" parent="Control/GridContainer" instance=ExtResource( 2 )]
+margin_left = 104.0
+margin_right = 204.0
+
+[node name="Panel3" parent="Control/GridContainer" instance=ExtResource( 2 )]
+margin_left = 208.0
+margin_right = 308.0
+
+[node name="Panel4" parent="Control/GridContainer" instance=ExtResource( 2 )]
+margin_left = 312.0
+margin_right = 412.0
+
+[node name="Panel5" parent="Control/GridContainer" instance=ExtResource( 2 )]
+margin_top = 104.0
+margin_bottom = 204.0
