@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Node.gd" type="Script" id=1]
+
+[sub_resource type="ButtonGroup" id=1]
+resource_name = "them"
+
+[node name="Node" type="Node"]
+script = ExtResource( 1 )
+
+[node name="CheckBox" type="CheckBox" parent="."]
+margin_right = 24.0
+margin_bottom = 24.0
+group = SubResource( 1 )
+text = "cricket"
+
+[node name="CheckBox2" type="CheckBox" parent="."]
+margin_left = 75.0
+margin_top = 2.0
+margin_right = 151.0
+margin_bottom = 26.0
+group = SubResource( 1 )
+text = "football"
+
+[connection signal="pressed" from="CheckBox" to="." method="_on_CheckBox_pressed"]
+[connection signal="toggled" from="CheckBox" to="." method="_on_CheckBox_toggled"]
+[connection signal="pressed" from="CheckBox2" to="." method="_on_CheckBox_pressed"]
+[connection signal="toggled" from="CheckBox2" to="." method="_on_CheckBox_toggled"]

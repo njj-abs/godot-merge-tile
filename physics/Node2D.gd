@@ -8,12 +8,12 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	print(delta, floor(delta * pow(10, 3)) / pow(10, 3))
-
-	if (floor(delta * pow(10, 3)) / pow(10, 3)) == 0.005:
-		var instance = tile_scene.instance()
-		
-		instance.position = Vector2(340, 393)
-		
-		add_child(instance)
+#func _process(delta):
+#	print(delta, floor(delta * pow(10, 3)) / pow(10, 3))
+#
+#	if (floor(delta * pow(10, 3)) / pow(10, 3)) == 0.005:
+#		var instance = tile_scene.instance()
+#
+#		instance.position = Vector2(340, 393)
+#
+#		add_child(instance)

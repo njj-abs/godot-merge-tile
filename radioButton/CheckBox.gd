@@ -1,4 +1,4 @@
-extends Node
+extends CheckBox
 
 
 # Declare member variables here. Examples:
@@ -12,14 +12,11 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
 
-func _on_CheckBox_pressed(data):
-	print('click', data)
-
 
 func _on_CheckBox_toggled(button_pressed):
-	print('click', button_pressed)
+	print('clicked', button_pressed, self)
+
+
