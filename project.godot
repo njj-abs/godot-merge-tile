@@ -8,11 +8,25 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node",
+"class": "Draggable",
+"language": "GDScript",
+"path": "res://addons/DragDrop3D/Draggable.gd"
+} ]
+_global_script_class_icons={
+"Draggable": ""
+}
+
 [application]
 
 config/name="Merge"
 run/main_scene="res://demoOne/Node.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+DragDropController="*res://addons/DragDrop3D/DragDropController.gd"
 
 [gui]
 
