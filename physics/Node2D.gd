@@ -4,7 +4,15 @@ export(PackedScene) var tile_scene = load("res://physics/RigidBody2D.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	var instance = tile_scene.instance()
+#
+	instance.position = Vector2(340, 393)
+#
+	add_child(instance)
+	var instance1 = tile_scene.instance()
+	instance1.position = Vector2(345, 393)
+#
+	add_child(instance1)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
