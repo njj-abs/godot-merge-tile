@@ -41,4 +41,7 @@ pixel_size = 0.1
 script = ExtResource( 3 )
 
 [connection signal="body_entered" from="." to="." method="_on_Tile_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_Tile_body_exited"]
 [connection signal="drag_move" from="Draggable" to="." method="_on_Draggable_drag_move"]
+[connection signal="drag_start" from="Draggable" to="." method="_on_Draggable_drag_start"]
+[connection signal="drag_stop" from="Draggable" to="." method="_on_Draggable_drag_stop"]
