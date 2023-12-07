@@ -12,9 +12,16 @@ func _ready():
 
 
 func _on_Dragable_drag_move(node, cast):
-	set_translation(cast['position'])
+	var x =cast['position'].x
+
+	set_translation(Vector3(x,1.5,0))
 
 
 func _on_RigidBody_body_entered(body):
-	print('entered', self)
+	print('entered', self) 
 
+
+func _on_Dragable_drag_stop(node):
+	var x = get_translation().x
+	set_translation(Vector3(x, 1, 0))
+	set_physics_process(true)
