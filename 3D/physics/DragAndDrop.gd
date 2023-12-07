@@ -11,7 +11,7 @@ const tiles = [
 	{
 		"value": 2,
 		"position": {
-			"x": 0,
+			"x": 1.5,
 			"y": 0.1,
 			"z": 0
 		}
@@ -19,7 +19,7 @@ const tiles = [
 	{
 		"value": 3,
 		"position": {
-			"x":0,
+			"x":-1,
 			"y": 0.1,
 			"z": 0
 		}
@@ -34,12 +34,11 @@ func _ready():
 		var z = tile.position.z;
 		
 		var instance = tile_scene.instance();
-		print(instance.translation)
 		instance.translation = Vector3(x, y, z)
 #		instance.linear_velocity.x = 7
 #		instance.linear_velocity.z = 7
 		instance.get_node("Label3D").text = str(tile.value)
-		instance.get_node("Label3D").value = tile.value
+		instance.value = tile.value
 		add_child(instance)
 
 

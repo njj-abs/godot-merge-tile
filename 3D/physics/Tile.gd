@@ -4,6 +4,7 @@ var drop = false
 var entered = false
 var area = null
 var initial_position = 0
+var value
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
