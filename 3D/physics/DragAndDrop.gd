@@ -12,7 +12,7 @@ const tiles = [
 		"value": 2,
 		"position": {
 			"x": 1.5,
-			"y": 0.1,
+			"y": 0.3,
 			"z": 0
 		}
 	},
@@ -20,8 +20,16 @@ const tiles = [
 		"value": 3,
 		"position": {
 			"x":-1,
-			"y": 0.1,
+			"y": 0.3,
 			"z": 0
+		}
+	},
+	{
+		"value": 'hammer',
+		"position": {
+			"x":-1,
+			"y": 0.3,
+			"z": 2
 		}
 	},
 ]
