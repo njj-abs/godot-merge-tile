@@ -34,6 +34,8 @@ func get_split_tile():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$square/Plane.set_surface_material(0,SpatialMaterial.new())
+	$square/Plane.get_surface_material(0).albedo_color = Color.cornflower
 	
 	initial_position = get_translation()
 
