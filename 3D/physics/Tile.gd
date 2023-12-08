@@ -15,7 +15,7 @@ func get_split_tile():
 		{
 			"value": 4,
 			"position": {
-				"x": position.x + 0.5,
+				"x": position.x + 0.8,
 				"y": position.y,
 				"z": position.z
 			},
@@ -24,7 +24,7 @@ func get_split_tile():
 		{
 			"value": 1,
 			"position": {
-				"x": position.x - 0.5,
+				"x": position.x - 0.8,
 				"y": position.y,
 				"z": position.z
 			},
@@ -56,7 +56,8 @@ func add_split_tile():
 		
 		tile_instance.translation = Vector3(position.x, position.y, position.z)
 		tile_instance.scale = Vector3(0.5,0.5,0.5)
-		tile_instance.linear_velocity.x = tile.velocity
+		tile_instance.apply_impulse(Vector3(0.1, 0, 0), Vector3(tile.velocity,0,5.5))
+
 		tile_instance.get_node("Label3D").text = str(tile.value)
 		tile_instance.value = tile.value
 		colliedBody.queue_free()
