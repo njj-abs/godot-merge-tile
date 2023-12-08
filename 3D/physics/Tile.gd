@@ -34,6 +34,7 @@ func get_split_tile():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	initial_position = get_translation()
 
 func add_new_tile():
@@ -63,22 +64,20 @@ func add_split_tile():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if is_drop and is_entered:
-		print('if',is_drop, is_entered)
 		is_drop = false
 		is_entered = false
-		print(str(self.value))
 		if str(self.value) == 'hammer':
 			add_split_tile()
 		else:
 			add_new_tile()
 	elif (str(self.value) != 'hammer') and is_drop and (not is_entered) and  translation.x != initial_position.x:
-		print(is_drop, is_entered, get_translation(), initial_position)
 		translation = initial_position
 
 
 func _on_Draggable_drag_move(node, cast):
 	var x = cast['position'].x
-	set_translation(Vector3(x, 0.5, 0))
+	var z = cast['position'].z
+	set_translation(Vector3(x, 0.5, z))
 
 
 func _on_Tile_body_entered(body):
