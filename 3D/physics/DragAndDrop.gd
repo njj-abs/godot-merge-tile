@@ -1,6 +1,6 @@
 extends Spatial
 
-export(PackedScene) var tile_scene = preload("res://3D/physics/Tile.tscn")
+export(PackedScene) var tile_scene = load("res://3D/physics/Tile.tscn")
 
 var drop = false
 var entered = false
@@ -19,7 +19,7 @@ const tiles = [
 	{
 		"value": 3,
 		"position": {
-			"x":-1,
+			"x": -1,
 			"y": 0.3,
 			"z": 0
 		}
@@ -27,7 +27,7 @@ const tiles = [
 	{
 		"value": 'hammer',
 		"position": {
-			"x":-1,
+			"x": -1,
 			"y": 0.3,
 			"z": 2
 		}
