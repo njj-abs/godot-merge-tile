@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://3D/physics/DragAndDrop.gd" type="Script" id=1]
 [ext_resource path="res://3D/physics/Tile.tscn" type="PackedScene" id=3]
@@ -19,6 +19,8 @@ data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1
 
 [sub_resource type="PhysicsMaterial" id=10]
 bounce = 0.1
+
+[sub_resource type="BoxShape" id=11]
 
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 1 )
@@ -60,3 +62,17 @@ physics_material_override = SubResource( 10 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RightStaticBody"]
 shape = SubResource( 8 )
+
+[node name="StaticBody" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14524, 9.19732 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 13.8877, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 11 )
+
+[node name="StaticBody2" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14524, -9.08236 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody2"]
+transform = Transform( 13.8877, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 11 )
