@@ -55,8 +55,8 @@ func add_split_tile():
 		var position = tile.position;
 		
 		tile_instance.translation = Vector3(position.x, position.y, position.z)
-		tile_instance.scale = Vector3(0.5,0.5,0.5)
-		tile_instance.apply_impulse(Vector3(0.1, 0, 0), Vector3(tile.velocity,0,5.5))
+		tile_instance.scale = Vector3(0.5, 2,0.5)
+		tile_instance.apply_impulse(Vector3(0.1, 0, 0), Vector3(tile.velocity,0,0))
 
 		tile_instance.get_node("Label3D").text = str(tile.value)
 		tile_instance.value = tile.value

@@ -20,18 +20,20 @@ bounce = 0.5
 script = ExtResource( 1 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 20, 0 )
+transform = Transform( 1, 0, 0, 0, 0.34202, 0.939693, 0, -0.939693, 0.34202, 0, 20, 7 )
 keep_aspect = 0
 current = true
 
 [node name="Tile" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.28965, 0.1, -3.72262 )
+visible = false
 
 [node name="Tile2" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00404263, 0.1, -3.51251 )
+visible = false
 
 [node name="Floor" type="KinematicBody" parent="."]
-transform = Transform( 14, 0, 0, 0, 5, 0, 0, 0, 10, 0, 0, 0 )
+transform = Transform( 26, 0, 0, 0, 5, 0, 0, 0, 16, 0, 0, 0 )
 motion/sync_to_physics = true
 
 [node name="CollisionShape" type="CollisionShape" parent="Floor"]
@@ -44,21 +46,21 @@ mesh = SubResource( 6 )
 material/0 = SubResource( 7 )
 
 [node name="BottomStaticBody" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14524, 9.19732 )
+transform = Transform( 1.60903, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.145, 9 )
 
 [node name="CollisionShape" type="CollisionShape" parent="BottomStaticBody"]
 transform = Transform( 13.8877, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 11 )
 
 [node name="TopStaticBody" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14524, -9.08236 )
+transform = Transform( 1.52634, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.145, -11 )
 
 [node name="CollisionShape" type="CollisionShape" parent="TopStaticBody"]
 transform = Transform( 13.8877, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 11 )
 
 [node name="LeftStaticBody" type="StaticBody" parent="."]
-transform = Transform( 0.0791973, 0, 0, 0, 1, 0, 0, 0, 9.05702, -14.9836, 0.71321, 0.972897 )
+transform = Transform( 0.0774666, 0, 3.07167, 0, 1, 0, -0.016466, 0, 14.451, -15, 0.713, 0 )
 physics_material_override = SubResource( 12 )
 
 [node name="CollisionShape" type="CollisionShape" parent="LeftStaticBody"]
@@ -66,7 +68,7 @@ transform = Transform( 13.8877, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 11 )
 
 [node name="RightStaticBody" type="StaticBody" parent="."]
-transform = Transform( 0.0791973, 0, 0, 0, 1, 0, 0, 0, 9.05702, 14.9357, 0.71321, 0.972897 )
+transform = Transform( 0.0774667, 0, -3.1378, 0, 1, 0, 0.016466, 0, 14.7622, 15, 0.713, 0 )
 physics_material_override = SubResource( 12 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RightStaticBody"]
