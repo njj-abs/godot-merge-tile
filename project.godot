@@ -28,6 +28,11 @@ config/icon="res://icon.png"
 
 DragDropController="*res://addons/DragDrop3D/DragDropController.gd"
 
+[global]
+
+emd=false
+e=false
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
