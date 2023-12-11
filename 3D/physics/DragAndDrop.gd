@@ -24,18 +24,16 @@ const tiles = [
 			"z": 0
 		}
 	},
-	{
-		"value": 'hammer',
-		"position": {
-			"x": -1,
-			"y": 0.3,
-			"z": 2
-		}
-	},
 ]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var hammer = tile_scene.instance();
+	hammer.translation = Vector3(-1, 0.3, 2)
+	hammer.get_node("Label3D").text = 'Hammer'
+	hammer.value = 'hammer'
+	hammer.get_node("Label3D").pixel_size = 0.03
+	add_child(hammer)
 	for tile in tiles:
 		var x = tile.position.x;
 		var y = tile.position.y;
