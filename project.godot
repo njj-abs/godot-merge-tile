@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Merge"
-run/main_scene="res://demoOne/Node.tscn"
+run/main_scene="res://3D/physics/DragAndDrop.tscn"
 config/icon="res://icon.png"
 
 [autoload]
