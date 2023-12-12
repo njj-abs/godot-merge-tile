@@ -105,8 +105,7 @@ shadow_bias = 4.137
 shadow_contact = 5.0
 
 [node name="RigidBody" type="RigidBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
-visible = false
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5525, 1, 0 )
 
 [node name="MeshInstance" type="MeshInstance" parent="RigidBody"]
 mesh = SubResource( 13 )

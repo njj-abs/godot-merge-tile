@@ -34,16 +34,12 @@ func get_split_tile():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$square/Plane.set_surface_material(0,SpatialMaterial.new())
-	$square/Plane.get_surface_material(0).albedo_color = Color.cornflower
-	
 	initial_position = get_translation()
 
 func add_new_tile():
 	var tile_instance = tile_scene.instance();
-	
 	tile_instance.translation = colliedBody.translation
-	tile_instance.get_node("Label3D").text = str(value + colliedBody.value)
+	tile_instance.get_node("Label3D").text = str(value + colliedBody.value) 
 	tile_instance.value = value + colliedBody.value
 	colliedBody.queue_free()
 	queue_free()
@@ -51,11 +47,13 @@ func add_new_tile():
 
 func add_split_tile():
 	for tile in get_split_tile():
+		var tween = $Tween
 		var tile_instance = tile_scene.instance();
 		var position = tile.position;
-		
+		var initial_scale = Vector3(0, 0.5, 0)
+		var final_scale = Vector3(1, 1, 1)
 		tile_instance.translation = Vector3(position.x, position.y, position.z)
-		tile_instance.scale = Vector3(0.5, 2,0.5)
+		tween.interpolate_property(tile_instance, "scale", initial_scale, final_scale, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		tile_instance.apply_impulse(Vector3(0.1, 0, 0), Vector3(tile.velocity,0,0))
 
 		tile_instance.get_node("Label3D").text = str(tile.value)
@@ -63,6 +61,8 @@ func add_split_tile():
 		colliedBody.queue_free()
 
 		$"..".add_child(tile_instance)
+		tween.start()
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
