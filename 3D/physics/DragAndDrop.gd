@@ -33,8 +33,8 @@ func _ready():
 	hammer.value = 'hammer'
 	hammer.get_node("Label3D").pixel_size = 0.03
 
-	hammer.get_node("square").get_node("Plane").set_surface_material(0, SpatialMaterial.new())
-	hammer.get_node("square").get_node("Plane").get_surface_material(0).albedo_texture = load("res://3D/hammer.png")
+	hammer.get_node("Tile").get_node("Plane").set_surface_material(0, SpatialMaterial.new())
+	hammer.get_node("Tile").get_node("Plane").get_surface_material(0).albedo_texture = load("res://3D/hammer.png")
 	
 	add_child(hammer)
 	
