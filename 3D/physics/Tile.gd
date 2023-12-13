@@ -71,7 +71,7 @@ func _process(delta):
 		is_entered = false
 		if str(self.value) == 'hammer':
 			add_split_tile()
-		else:
+		elif str(colliedBody.value) != 'hammer':
 			add_new_tile()
 	elif (str(self.value) != 'hammer') and is_drop and (not is_entered) and  translation.x != initial_position.x:
 		translation = initial_position
