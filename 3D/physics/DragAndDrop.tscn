@@ -54,10 +54,10 @@ size = 35.0
 far = 131.0
 
 [node name="Tile" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.29, 2, -3.723 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8872, 2, 6.49618 )
 
 [node name="Tile2" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00404263, 0.1, -5.94186 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.2676, 0.138799, -6.01859 )
 
 [node name="Floor" type="KinematicBody" parent="."]
 transform = Transform( 26, 0, 0, 0, 5, 0, 0, 0, 16, 0, -7, 0 )
