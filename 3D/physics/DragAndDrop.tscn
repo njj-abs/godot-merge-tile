@@ -40,9 +40,12 @@ uv1_scale = Vector3( 3, 2, 1 )
 script = ExtResource( 1 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.34202, 0.939693, 0, -0.939693, 0.34202, 0, 20, 7 )
+transform = Transform( 1, 0, 0, 0, 0.34202, 0.939693, 0, -0.939693, 0.34202, 0, 54, 17 )
 keep_aspect = 0
+projection = 1
 current = true
+size = 35.0
+far = 131.0
 
 [node name="Tile" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.29, 2, -3.723 )
@@ -73,14 +76,14 @@ transform = Transform( 13.8877, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 11 )
 
 [node name="TopStaticBody" type="StaticBody" parent="."]
-transform = Transform( 1.52634, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.145, -11 )
+transform = Transform( 1.52634, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.145, -14 )
 
 [node name="CollisionShape" type="CollisionShape" parent="TopStaticBody"]
 transform = Transform( 13.8877, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 11 )
 
 [node name="LeftStaticBody" type="StaticBody" parent="."]
-transform = Transform( 0.0774666, 0, 3.07167, 0, 1, 0, -0.016466, 0, 14.451, -15, 0.713, 0 )
+transform = Transform( 0.0791972, 0, 0, 0, 1, 0, 0, 0, 14.7738, -18, 0.713, 0 )
 physics_material_override = SubResource( 12 )
 
 [node name="CollisionShape" type="CollisionShape" parent="LeftStaticBody"]
@@ -88,7 +91,7 @@ transform = Transform( 13.8877, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 11 )
 
 [node name="RightStaticBody" type="StaticBody" parent="."]
-transform = Transform( 0.0774667, 0, -3.1378, 0, 1, 0, 0.016466, 0, 14.7622, 15, 0.713, 0 )
+transform = Transform( 0.0791973, 0, 0, 0, 1, 0, 0, 0, 15.092, 18, 0.713, 0 )
 physics_material_override = SubResource( 12 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RightStaticBody"]
@@ -99,10 +102,10 @@ shape = SubResource( 11 )
 environment = SubResource( 16 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="WorldEnvironment"]
-transform = Transform( -0.62932, 0.612399, -0.478459, 0, 0.615661, 0.788011, 0.777146, 0.495911, -0.387449, 0, 0, 0 )
+transform = Transform( -0.669131, 0.585606, -0.457526, 0, 0.615661, 0.788011, 0.743145, 0.527282, -0.411958, 49.699, 0, 0 )
 shadow_enabled = true
-shadow_bias = 4.137
-shadow_contact = 5.0
+shadow_bias = 0.0
+directional_shadow_max_distance = 60.9
 
 [node name="RigidBody" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5525, 1, 0 )
