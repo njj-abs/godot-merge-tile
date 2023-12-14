@@ -19,7 +19,7 @@ func get_split_tile():
 				"y": position.y,
 				"z": position.z
 			},
-			"velocity": 8
+			"velocity": 15
 		},
 		{
 			"value": 1,
@@ -28,7 +28,7 @@ func get_split_tile():
 				"y": position.y,
 				"z": position.z
 			},
-			"velocity": -8
+			"velocity": -15
 		},
 	]
 
@@ -54,7 +54,7 @@ func add_split_tile():
 		var final_scale = Vector3(1, 1, 1)
 		tile_instance.translation = Vector3(position.x, position.y, position.z)
 		tween.interpolate_property(tile_instance, "scale", initial_scale, final_scale, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-		tile_instance.apply_impulse(Vector3(0.1, 0, 0), Vector3(tile.velocity,0,0))
+		tile_instance.apply_impulse(Vector3(0.1, 0, 0), Vector3(0,0,tile.velocity))
 
 		tile_instance.get_node("Label3D").text = str(tile.value)
 		tile_instance.value = tile.value
@@ -80,7 +80,8 @@ func _process(delta):
 func _on_Draggable_drag_move(node, cast):
 	var x = cast['position'].x
 	var z = cast['position'].z
-	set_translation(Vector3(x, 0.5, z))
+	
+	set_translation(Vector3(x, ($Tile.scale.y / 2), z))
 
 
 func _on_Tile_body_entered(body):
