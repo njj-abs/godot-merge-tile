@@ -3,7 +3,7 @@
 [ext_resource path="res://addons/DragDrop3D/Draggable.gd" type="Script" id=1]
 [ext_resource path="res://3D/physics/Tile.gd" type="Script" id=2]
 [ext_resource path="res://3D/physics/Label3D.gd" type="Script" id=3]
-[ext_resource path="res://fonts/RubilBubbles/RubikBubbles-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://fonts/Anton/Anton-Regular.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://3D/model/tile/Tile.gltf" type="PackedScene" id=5]
 
 [sub_resource type="PhysicsMaterial" id=5]
